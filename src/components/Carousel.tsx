@@ -13,7 +13,7 @@ const Carousel = ({
   media: ProjectMedia;
   isMobile: IProject["isMobile"];
 }) => {
-  const [selectedMediaIndex, setSelectedMediaIndex] = useState<number>(1);
+  const [selectedMediaIndex, setSelectedMediaIndex] = useState<number>(0);
   const [selectedMedia, setSelectedMedia] = useState<MediaItem>(media[0]);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 

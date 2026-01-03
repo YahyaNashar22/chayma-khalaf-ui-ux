@@ -1,1 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 @import "tailwindcss";
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: var(--font-roboto);
+}
+
+.project-title {
+  @apply text-6xl font-bold mb-2;
+}
+
+.project-subtitle {
+  @apply text-3xl font-bold mb-12;
+}
+
+.project-description {
+  @apply flex flex-col gap-6 mb-12;
+}
+
+.project-description-text {
+  @apply text-xl font-bold;
+}
+
+.project-tags {
+  @apply flex items-center justify-start w-full list-none p-0 m-0 gap-4;
+}
+
+.project-tag-item {
+  @apply list-none px-3 py-1 text-lg rounded-lg font-bold h-24 md:h-auto text-center flex items-center justify-center;
+}

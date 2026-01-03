@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -15,6 +16,7 @@ const App = () => {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </main>
   );
 };

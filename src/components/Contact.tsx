@@ -25,14 +25,6 @@ const Contact = () => {
           Work With Me!
         </h1>
         <div className="text-white font-bold mt-auto flex items-center justify-center md:justify-around w-full flex-wrap gap-y-6">
-          <a
-            href="https://wa.me/96176187092"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border px-5 md:px-8 py-3 rounded-full text-center text-lg md:text-2xl "
-          >
-            +961 76 187 092
-          </a>
           <div className="flex items-center justify-center gap-6 flex-wrap">
             <a
               href="https://www.linkedin.com/in/chayma-khalaf-62b7661aa/"
@@ -52,6 +44,16 @@ const Contact = () => {
               <img src={whatsapp} alt="whatsapp" />
             </a>
           </div>
+
+          <a
+            href="https://wa.me/96176187092"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border px-5 md:px-8 py-3 rounded-full text-center text-lg md:text-2xl "
+          >
+            +961 76 187 092
+          </a>
+
           <a
             href="mailto:Chaimakhalaf9@gmail.com"
             className="border px-8 py-3 rounded-full text-center text-xl md:text-2xl "

@@ -127,14 +127,14 @@ const Carousel = ({
           &gt;
         </div>
       </div>
-      <div className="flex items-center justify-center px-4 mt-8 md:mt-4">
+      <div className="flex items-center justify-center px-4 mt-12 md:mt-4">
         <div
           onClick={handleBack}
           className="flex rounded-full text-center md:hidden items-center justify-center bg-white/50 text-white text-lg h-7 w-8 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
         >
           &lt;
         </div>
-        <ul className="flex items-center justify-center mt-4 px-6 py-2 gap-8 bg-white/40 w-fit mx-4 md:mx-auto rounded-full">
+        <ul className="flex items-center justify-center px-6 py-2 gap-8 bg-white/40 w-fit mx-4 md:mx-auto rounded-full">
           {media.map((item, index) => (
             <li
               key={index}

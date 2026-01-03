@@ -8,12 +8,12 @@ const Hero = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   useGSAP(
     () => {
-      if (!containerRef) return;
+      if (!containerRef.current) return;
       const tl = gsap.timeline({
         defaults: { duration: 1, opacity: 0, y: 20 },
       });
 
-      tl.from(containerRef.current!.children, {
+      tl.from(containerRef.current.children, {
         opacity: 0,
         y: 20,
         stagger: 0.4,

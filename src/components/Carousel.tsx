@@ -74,10 +74,10 @@ const Carousel = ({
       <div className="h-80 w-screen md:h-160 md:w-240 flex items-center justify-center gap-2">
         <div
           onClick={handleBack}
-          className="hidden rounded-full text-center md:flex items-center justify-center bg-white/50
-           text-white text-lg h-10 w-12 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
+          className="hidden rounded-full text-center md:flex items-center justify-center bg-white/20
+           text-white text-2xl h-10 w-12 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
         >
-          &lt;
+          &lsaquo;
         </div>
         <div
           ref={mediaRef}
@@ -122,19 +122,19 @@ const Carousel = ({
         </div>
         <div
           onClick={handleNext}
-          className="hidden rounded-full text-center md:flex items-center justify-center bg-white/50 text-white text-lg h-10 w-12 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
+          className="hidden rounded-full text-center md:flex items-center justify-center bg-white/20 text-white text-2xl h-10 w-12 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
         >
-          &gt;
+          &rsaquo;
         </div>
       </div>
       <div className="flex items-center justify-center px-4 mt-12 md:mt-4">
         <div
           onClick={handleBack}
-          className="flex rounded-full text-center md:hidden items-center justify-center bg-white/50 text-white text-lg h-7 w-8 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
+          className="flex rounded-full text-center md:hidden items-center justify-center bg-white/20 text-white text-2xl h-7 w-8 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
         >
-          &lt;
+          &lsaquo;
         </div>
-        <ul className="flex items-center justify-center px-6 py-2 gap-8 bg-white/40 w-fit mx-4 md:mx-auto rounded-full">
+        <ul className="flex items-center justify-center px-6 py-2  gap-8 bg-white/20 w-fit mx-4 md:mx-auto rounded-full">
           {media.map((item, index) => (
             <li
               key={index}
@@ -154,9 +154,9 @@ const Carousel = ({
         </ul>
         <div
           onClick={handleNext}
-          className="flex rounded-full text-center md:hidden items-center justify-center bg-white/50 text-white text-lg h-7 w-8 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
+          className="flex rounded-full text-center md:hidden items-center justify-center bg-white/20 text-white text-2xl h-7 w-8 cursor-pointer hover:bg-white hover:text-black duration-300 select-none"
         >
-          &gt;
+          &rsaquo;
         </div>
       </div>
       {isFullScreen && (

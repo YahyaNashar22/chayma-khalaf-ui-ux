@@ -25,7 +25,7 @@ const About = () => {
     <section
       id="about"
       ref={containerRef}
-      className="mt-[100vh] relative z-10 bg-white min-h-screen flex flex-col items-center justify-center text-center font-roboto gap-24"
+      className="mt-[100vh] relative z-10 bg-white min-h-screen flex flex-col items-center justify-center text-center font-roboto gap-24 px-4"
     >
       <p className="max-w-150 text-black text-xl md:text-4xl font-medium">
         I’m Chayma ~ a passionate UI/UX designer with multiple years of

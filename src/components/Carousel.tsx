@@ -71,7 +71,7 @@ const Carousel = ({
   );
   return (
     <div>
-      <div className="h-80 w-screen md:h-160 md:w-240 flex items-center justify-center gap-2">
+      <div className="h-80 md:h-160 md:w-240 flex items-center justify-center gap-2">
         <div
           onClick={handleBack}
           className="hidden rounded-full text-center md:flex items-center justify-center bg-white/20
@@ -82,7 +82,7 @@ const Carousel = ({
         <div
           ref={mediaRef}
           onClick={() => setIsFullScreen(true)}
-          className="md:rounded-2xl shadow-2xl shadow-black h-80 w-screen md:h-160 md:w-240 overflow-hidden flex items-center justify-center"
+          className="rounded-2xl shadow-2xl shadow-black h-80 md:h-160 md:w-240 overflow-hidden flex items-center justify-center"
         >
           {selectedMedia.type === "image" && (
             <img
@@ -104,8 +104,8 @@ const Carousel = ({
                     playsInline
                     className="object-cover h-full w-full"
                   />
-                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 h-2 w-1/2 bg-gray-200 rounded-full" />
-                  <div className="absolute top-1 left-1/2 -translate-x-1/2 h-2 w-2 bg-gray-200 rounded-full" />
+                  {/* <div className="absolute bottom-2 left-1/2 -translate-x-1/2 h-2 w-1/2 bg-gray-200 rounded-full" />
+                  <div className="absolute top-1 left-1/2 -translate-x-1/2 h-2 w-2 bg-gray-200 rounded-full" /> */}
                 </div>
               ) : (
                 <video

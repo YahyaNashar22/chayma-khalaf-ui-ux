@@ -40,7 +40,7 @@ const Project = ({ project }: { project: IProject }) => {
   );
   return (
     <div
-      className={`min-h-screen overflow-hidden ${project.bgColor} flex flex-wrap items-center justify-between md:px-12 pb-24 md:py-24 gap-24`}
+      className={`min-h-screen overflow-hidden ${project.bgColor} flex flex-wrap items-center justify-between px-2 md:px-12 py-24 md:py-24 gap-24`}
     >
       <Carousel media={project.media} isMobile={project.isMobile} />
       <div

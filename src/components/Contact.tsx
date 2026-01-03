@@ -29,7 +29,7 @@ const Contact = () => {
             href="https://wa.me/96176187092"
             target="_blank"
             rel="noopener noreferrer"
-            className="border px-8 py-3 rounded-full text-center text-xl md:text-2xl "
+            className="border px-5 md:px-8 py-3 rounded-full text-center text-lg md:text-2xl "
           >
             +961 76 187 092
           </a>

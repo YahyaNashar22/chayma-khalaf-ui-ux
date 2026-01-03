@@ -25,10 +25,10 @@ const Nav = () => {
     () => {
       if (!isOpen) {
         gsap.to(".line-1-b", {
-          backgroundColor: "#000",
+          backgroundColor: "transparent",
         });
         gsap.to(".line-3-b", {
-          backgroundColor: "#000",
+          backgroundColor: "transparent",
         });
       }
       if (isOpen) {
@@ -37,7 +37,6 @@ const Nav = () => {
           y: 8,
           rotate: 45,
           duration: 0.3,
-          backgroundColor: "#ffffff", // Ensure it's white when menu is open
         });
         gsap.to(".line-1-b", {
           backgroundColor: "#FFF",
@@ -96,11 +95,11 @@ const Nav = () => {
         >
           <span className="line-1 flex w-6 h-0.5">
             <span className="w-3 h-full bg-white"></span>
-            <span className="line-1-b w-3 h-full bg-black"></span>
+            <span className="line-1-b w-3 h-full bg-transparent"></span>
           </span>
           <span className="line-2 w-6 h-0.5 bg-white block"></span>
           <span className="line-3 flex w-6 h-0.5">
-            <span className="line-3-b w-3 h-full bg-black"></span>
+            <span className="line-3-b w-3 h-full bg-transparent"></span>
             <span className="w-3 h-full bg-white"></span>
           </span>
         </button>

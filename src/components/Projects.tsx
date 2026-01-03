@@ -8,18 +8,23 @@ import Project from "./Project";
 
 const Projects = () => {
   useGSAP(() => {
-    const panels = gsap.utils.toArray<HTMLElement>(".project-panel");
+    const mm = gsap.matchMedia();
+    mm.add("(min-width: 768px)", () => {
+      const panels = gsap.utils.toArray<HTMLElement>(".project-panel");
 
-    panels.forEach((panel, i) => {
-      const isLast = i === panels.length - 1;
-      ScrollTrigger.create({
-        trigger: panel,
-        start: "top top",
-        pin: true,
-        pinSpacing: isLast ? true : false,
-        scrub: true,
+      panels.forEach((panel, i) => {
+        const isLast = i === panels.length - 1;
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top top",
+          pin: true,
+          pinSpacing: isLast ? true : false,
+          scrub: true,
+        });
       });
     });
+
+    return () => mm.revert();
   }, []);
   return (
     <section id="works" className="relative flex flex-col">

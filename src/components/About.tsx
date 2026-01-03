@@ -25,7 +25,6 @@ const About = () => {
     <section
       id="about"
       ref={containerRef}
-      style={{ borderTopLeftRadius: "100%", borderTopRightRadius: "100%" }}
       className="mt-[100vh] relative z-10 bg-white min-h-screen flex flex-col items-center justify-center text-center font-roboto gap-24"
     >
       <p className="max-w-150 text-black text-2xl font-medium">

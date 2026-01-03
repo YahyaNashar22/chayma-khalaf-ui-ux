@@ -82,7 +82,7 @@ const Carousel = ({
         <div
           ref={mediaRef}
           onClick={() => setIsFullScreen(true)}
-          className="rounded-2xl shadow-2xl shadow-black h-80 w-80 md:h-160 md:w-240 overflow-hidden flex items-center justify-center"
+          className="md:rounded-2xl shadow-2xl shadow-black h-80 w-screen md:h-160 md:w-240 overflow-hidden flex items-center justify-center"
         >
           {selectedMedia.type === "image" && (
             <img

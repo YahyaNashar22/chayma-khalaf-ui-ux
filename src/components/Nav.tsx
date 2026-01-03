@@ -19,7 +19,7 @@ const Nav = () => {
           <p
             key={link}
             onClick={() => scrollToElement(link)}
-            className={`text-white font-roboto text-xl font-light cursor-pointer
+            className={`text-white font-roboto text-lg md:text-xl font-light cursor-pointer
           ${
             link === "contact_me"
               ? "border rounded-full px-3 py-1 bg-[#B9B6B6]/17"

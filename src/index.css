@@ -34,3 +34,15 @@ body {
 .project-tag-item {
   @apply list-none px-3 py-1 text-lg rounded-lg font-bold h-24 md:h-auto text-center flex items-center justify-center;
 }
+
+#about {
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+
+@media (max-width: 768px) {
+  #about {
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+  }
+}

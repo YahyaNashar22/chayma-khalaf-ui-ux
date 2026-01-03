@@ -1,5 +1,11 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
 const App = () => {
-  return <div>App</div>;
+  return <main></main>;
 };
 
 export default App;

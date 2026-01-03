@@ -258,10 +258,10 @@ const projectsData: IProject[] = [
     id: 5,
     bgColor: "bg-[#D1BFA7]",
     title: (
-      <h2 className="project-title  text-white flex items-center">
-        SHELH
+      <h2 className="project-title  text-white flex items-center text-5xl! md:text-6xl!">
+        SHELLH
         <span>
-          <img src={seashell} alt="seashell" />
+          <img src={seashell} alt="seashell" className="w-8 md:w-12" />
         </span>
         USE
       </h2>
@@ -270,9 +270,9 @@ const projectsData: IProject[] = [
       <p className="project-subtitle text-white">Interactive Restaurant Menu</p>
     ),
     description: (
-      <div className="project-description text-white">
+      <div className="project-description text-white ">
         <p className="project-description-text">
-          A beige-themed interactive menu designed for ShelfHouse, inspired by a
+          A beige-themed interactive menu designed for ShellHouse, inspired by a
           seafood dining concept.
         </p>
         <p className="project-description-text">

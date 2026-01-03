@@ -24,16 +24,40 @@ const Contact = () => {
         <h1 className="text-6xl md:text-8xl text-center text-white font-bold mt-auto ">
           Work With Me!
         </h1>
-        <div className="text-white text-xl md:text-2xl font-bold mt-auto flex items-center justify-center md:justify-around w-full flex-wrap gap-y-6">
-          <p className="border px-8 py-3 rounded-full">+961 76 187 092</p>
+        <div className="text-white font-bold mt-auto flex items-center justify-center md:justify-around w-full flex-wrap gap-y-6">
+          <a
+            href="https://wa.me/96176187092"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border px-8 py-3 rounded-full text-center text-xl md:text-2xl "
+          >
+            +961 76 187 092
+          </a>
           <div className="flex items-center justify-center gap-6 flex-wrap">
-            <img src={linkedin} alt="linkedin" />
-            <img src={mail} alt="mail" />
-            <img src={whatsapp} alt="whatsapp" />
+            <a
+              href="https://www.linkedin.com/in/chayma-khalaf-62b7661aa/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedin} alt="linkedin" />
+            </a>
+            <a href="mailto:Chaimakhalaf9@gmail.com">
+              <img src={mail} alt="mail" />
+            </a>
+            <a
+              href="https://wa.me/96176187092"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={whatsapp} alt="whatsapp" />
+            </a>
           </div>
-          <p className="border px-8 py-3 rounded-full">
+          <a
+            href="mailto:Chaimakhalaf9@gmail.com"
+            className="border px-8 py-3 rounded-full text-center text-xl md:text-2xl "
+          >
             Chaimakhalaf9@gmail.com
-          </p>
+          </a>
         </div>
       </div>
     </section>

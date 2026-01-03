@@ -27,18 +27,18 @@ const About = () => {
       ref={containerRef}
       className="mt-[100vh] relative z-10 bg-white min-h-screen flex flex-col items-center justify-center text-center font-roboto gap-24"
     >
-      <p className="max-w-150 text-black text-2xl md:text-4xl font-medium">
+      <p className="max-w-150 text-black text-xl md:text-4xl font-medium">
         I’m Chayma ~ a passionate UI/UX designer with multiple years of
         experience creating interactive and visually engaging digital
         experiences.
       </p>
       <div className="flex flex-col gap-12">
-        <p className="max-w-200 text-black text-2xl md:text-4xl font-normal">
+        <p className="max-w-200 text-black text-xl md:text-4xl font-normal">
           Every project you see in this portfolio is fully designed and
           prototyped in Figma, and many are developed into websites to showcase
           realistic, usable final designs.
         </p>
-        <p className="max-w-200 text-black text-2xl md:text-4xl font-normal">
+        <p className="max-w-200 text-black text-xl md:text-4xl font-normal">
           I focus on designing from concept to completion, ensuring users can
           enjoy seamless interactions and clients can see their projects come to
           life. I combine creativity with usability to craft memorable

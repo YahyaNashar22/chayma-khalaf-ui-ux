@@ -12,6 +12,7 @@ export interface IProject {
     src: string;
     type: "image" | "video";
   }[];
+  isMobile?: boolean;
 }
 
 const Project = ({ project }: { project: IProject }) => {
@@ -19,7 +20,7 @@ const Project = ({ project }: { project: IProject }) => {
     <div
       className={`min-h-screen ${project.bgColor} flex flex-wrap items-center justify-between md:px-12 py-24 gap-24`}
     >
-      <Carousel media={project.media} />
+      <Carousel media={project.media} isMobile={project.isMobile} />
       <div className="flex flex-col items-start justify-start flex-1 px-6 md:px-12 ">
         {project.title}
         {project.subtitle}

@@ -1,15 +1,27 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { IProject } from "./Project";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 type ProjectMedia = IProject["media"];
 type MediaItem = ProjectMedia[number];
 
-const Carousel = ({ media }: { media: ProjectMedia }) => {
+const Carousel = ({
+  media,
+  isMobile,
+}: {
+  media: ProjectMedia;
+  isMobile: IProject["isMobile"];
+}) => {
   const [selectedMediaIndex, setSelectedMediaIndex] = useState<number>(1);
   const [selectedMedia, setSelectedMedia] = useState<MediaItem>(media[0]);
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 
+  const mediaRef = useRef<HTMLDivElement | null>(null);
+  const directionRef = useRef<"next" | "back">("next");
+
   const handleNext = () => {
+    directionRef.current = "next";
     setSelectedMediaIndex((prevIndex) => {
       const nextIndex = (prevIndex + 1) % media.length;
       setSelectedMedia(media[nextIndex]);
@@ -18,6 +30,7 @@ const Carousel = ({ media }: { media: ProjectMedia }) => {
   };
 
   const handleBack = () => {
+    directionRef.current = "back";
     setSelectedMediaIndex((prevIndex) => {
       const prev = (prevIndex - 1 + media.length) % media.length;
       setSelectedMedia(media[prev]);
@@ -37,6 +50,25 @@ const Carousel = ({ media }: { media: ProjectMedia }) => {
     };
   }, [isFullScreen]);
 
+  useGSAP(
+    () => {
+      if (!mediaRef.current) return;
+
+      const fromX = directionRef.current === "next" ? 80 : -80;
+
+      gsap.fromTo(
+        mediaRef.current,
+        { x: fromX, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.5,
+          ease: "power2.out",
+        }
+      );
+    },
+    { dependencies: [selectedMediaIndex], scope: mediaRef }
+  );
   return (
     <div>
       <div className="h-80 w-screen md:h-160 md:w-240 flex items-center justify-center gap-2">
@@ -48,8 +80,9 @@ const Carousel = ({ media }: { media: ProjectMedia }) => {
           &lt;
         </div>
         <div
+          ref={mediaRef}
           onClick={() => setIsFullScreen(true)}
-          className="rounded-2xl shadow-2xl shadow-black h-80 w-80 md:h-160 md:w-240 overflow-hidden"
+          className="rounded-2xl shadow-2xl shadow-black h-80 w-80 md:h-160 md:w-240 overflow-hidden flex items-center justify-center"
         >
           {selectedMedia.type === "image" && (
             <img
@@ -60,14 +93,31 @@ const Carousel = ({ media }: { media: ProjectMedia }) => {
           )}
 
           {selectedMedia.type === "video" && (
-            <video
-              src={selectedMedia.src}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="object-cover h-full w-full"
-            />
+            <>
+              {isMobile ? (
+                <div className="relative h-3/4 w-1/3 md:h-3/4 md:w-1/4 bg-white border-4 rounded-2xl overflow-hidden shadow-2xl shadow-black">
+                  <video
+                    src={selectedMedia.src}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="object-cover h-full w-full"
+                  />
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 h-2 w-1/2 bg-gray-200 rounded-full" />
+                  <div className="absolute top-1 left-1/2 -translate-x-1/2 h-2 w-2 bg-gray-200 rounded-full" />
+                </div>
+              ) : (
+                <video
+                  src={selectedMedia.src}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="object-cover h-full w-full"
+                />
+              )}
+            </>
           )}
         </div>
         <div

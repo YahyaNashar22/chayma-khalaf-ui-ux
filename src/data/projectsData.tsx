@@ -138,6 +138,7 @@ const projectsData: IProject[] = [
         type: "video",
       },
     ],
+    isMobile: true,
   },
 
   {
@@ -250,12 +251,21 @@ const projectsData: IProject[] = [
         type: "video",
       },
     ],
+    isMobile: true,
   },
 
   {
     id: 5,
     bgColor: "bg-[#D1BFA7]",
-    title: <h2 className="project-title  text-white flex items-center">SHELH<span><img src={seashell} alt="seashell" /></span>USE</h2>,
+    title: (
+      <h2 className="project-title  text-white flex items-center">
+        SHELH
+        <span>
+          <img src={seashell} alt="seashell" />
+        </span>
+        USE
+      </h2>
+    ),
     subtitle: (
       <p className="project-subtitle text-white">Interactive Restaurant Menu</p>
     ),
@@ -282,7 +292,9 @@ const projectsData: IProject[] = [
       <ul className="project-tags text-white">
         <li className="project-tag-item bg-[#DBC9B0] border">UI/UX Design</li>
         <li className="project-tag-item bg-[#DBC9B0] border">Prototyping</li>
-        <li className="project-tag-item bg-[#DBC9B0] border">Interactive Design</li>
+        <li className="project-tag-item bg-[#DBC9B0] border">
+          Interactive Design
+        </li>
       </ul>
     ),
     media: [
